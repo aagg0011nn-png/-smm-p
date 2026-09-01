@@ -4,6 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { LayoutDashboard, Server, Users, ListOrdered, Wallet, LifeBuoy, Newspaper } from "lucide-react";
 import { SignOutButton } from "@/components/sign-out-button";
+export const dynamic = "force-dynamic";
 
 const navItems = [
   { href: "/admin/dashboard", label: "لوحة التحكم", icon: LayoutDashboard },
