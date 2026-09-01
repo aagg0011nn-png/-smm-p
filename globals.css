@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Tajawal", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Tajawal", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink-950 dark:bg-ink-950 dark:text-white antialiased;
+}
+
+/* Respect reduced-motion preference site-wide */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible focus ring for keyboard navigation, in both directions */
+:focus-visible {
+  outline: 2px solid theme("colors.brand.500");
+  outline-offset: 2px;
+}
+
+.card {
+  @apply rounded-xl2 border border-black/5 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-ink-900;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-600 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-lg border border-black/10 px-4 py-2.5 text-sm font-medium text-ink-950 transition-colors hover:bg-black/5 dark:border-white/15 dark:text-white dark:hover:bg-white/5;
+}
+
+.input {
+  @apply w-full rounded-lg border border-black/10 bg-white px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-brand-500 dark:border-white/15 dark:bg-ink-900 dark:text-white;
+}
+
+.label {
+  @apply mb-1.5 block text-sm font-medium text-ink-800 dark:text-white/80;
+}
