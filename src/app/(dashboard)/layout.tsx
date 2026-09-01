@@ -5,6 +5,7 @@ import { authOptions } from "@/lib/auth";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LayoutDashboard, ListOrdered, ShoppingCart, Wallet, LifeBuoy, LogOut, Layers, Code2 } from "lucide-react";
 import { SignOutButton } from "@/components/sign-out-button";
+export const dynamic = "force-dynamic";
 
 const navItems = [
   { href: "/dashboard", label: "الرئيسية", icon: LayoutDashboard },
